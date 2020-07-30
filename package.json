@@ -1,0 +1,25 @@
+{
+  "name": "sql-tinkering",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kevin Wang",
+  "license": "MIT",
+  "dependencies": {
+    "@pgtyped/cli": "^0.8.2",
+    "@pgtyped/query": "^0.8.2",
+    "pg": "^8.3.0",
+    "postgres-migrations": "^4.0.3",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/pg": "^7.14.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "ts-node .",
+    "container": "docker run --name my-postgres-container -e POSTGRES_PASSWORD=mysecretpassword -d -p 8080:5432 postgres:13-alpine"
+  }
+}
